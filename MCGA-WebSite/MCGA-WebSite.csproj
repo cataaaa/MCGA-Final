@@ -265,7 +265,6 @@
     <Content Include="Views\Profesional\Details.cshtml" />
     <Content Include="Views\Profesional\Edit.cshtml" />
     <Content Include="Views\Profesional\Index.cshtml" />
-    <Content Include="Views\Shared\_Layout2.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
