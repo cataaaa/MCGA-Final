@@ -1,5 +1,25 @@
-﻿@{
-    ViewBag.Title = "Home Page";
+﻿@using WebApplication1.Constants
+@using WebApplication1.Constants.HomeController
+@{
+    ViewBag.Title = "Titulo del Sitio - Ver SEO";
+    ViewBag.Description = "Description del Sitio - Ver SEO.";
+    ViewBag.Author = Application.Name;
+    ViewBag.ReferrerMode = ReferrerMode.OriginWhenCrossOrigin;
+    ViewBag.TwitterCard = new SummaryLargeImageTwitterCard("@TwitterCard");
+    ViewBag.OpenGraph = new OpenGraphBusiness(
+        ViewBag.Title,
+        new OpenGraphImage(Url.AbsoluteContent("~/content/icons/open-graph-1200x630.png")) { Height = 630, Type = ContentType.Png, Width = 1200 },
+        new OpenGraphContactData(Application.StreetAddress, Application.Locality, Application.PostalCode, Application.Country)
+        {
+            Email = Application.Email,
+            Phone = Application.Phone,
+            Website = Url.AbsoluteRouteUrl(HomeControllerRoute.GetIndex)
+        },
+        new OpenGraphLocation(Application.Latitude, Application.Longitude))
+    {
+        Determiner = OpenGraphDeterminer.Blank,
+        SiteName = Application.Name
+    };
 }
 
 <div class="jumbotron">
