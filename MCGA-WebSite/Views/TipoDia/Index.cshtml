@@ -1,4 +1,9 @@
-﻿@model IEnumerable<MCGA.Entities.TipoDia>
+﻿@*@model IEnumerable<MCGA.Entities.TipoDia>*@
+@using PagedList.Mvc;
+@model PagedList.IPagedList<MCGA.Entities.TipoDia>
+
+@*@model PagedList.IPagedList<MCGA.Data.Meta.TipoDia>;*@
+
 
 @{
     ViewBag.Title = "Index";
@@ -6,28 +11,94 @@
 
 <h2>Index</h2>
 
+@using (Html.BeginForm("Index", "TipoDia", FormMethod.Get))
+{
+    <p>
+        @Html.TextBox("SearchString", ViewBag.CurrentFilter as string,
+                      new
+                      {
+                          @class = "form-control text-box single-line",
+                          autocomplete = "off",
+                          placeholder = "Ingrese el día",
+                          style = "width:350px; display: inline-block;"
+                      })
+        <input type="submit" value="Buscar" class="btn btn-info" />
+    </p>
+}
+
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Nuevo día", "Crear", null, new { @class = "btn btn-success" })
 </p>
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.descripcion)
+            @Html.Raw("Descripción")
         </th>
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.descripcion)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.descripcion)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
+
 
 </table>
+
+Página @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) de @Model.PageCount
+@Html.PagedListPager(Model, page => Url.Action("List",
+    new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))
+
+
+@*<div class="_form-horizontal">
+    <div class="form-group">
+        <label for="DiaName" class="control-label col-md-2">Dia</label>
+        <div class="col-md-10">
+            <input class="form-control text-box single-line" data-val="true" data-val-required="Requerido" id="DiaName" name="DiaName" type="text" value="" placeholder="Ingrese las primeras letras del dia" />
+            <span class="field-validation-valid text-danger" data-valmsg-for="DiaName" data-valmsg-replace="true"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="diaId" class="control-label col-md-2">Dia Id</label>
+        <div class="col-md-10">
+            <input class="form-control text-box single-line" id="diaId" type="text" readonly="readonly" />
+        </div>
+    </div>
+
+</div>*@
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script>
+        $("#DiaName").autocomplete({
+            autoSelect: true,
+            autoFocus: true,
+            minLength: 1,
+            source: function (request, response) {
+                $.ajax({
+                    url: '@Url.Action("GetDias", "TipoDia")',
+                    datatype: "json",
+                    data: { Areas: '', term: request.term },
+                    success: function (data) {
+                        response($.map(data, function (val, item) {
+                            return { label: val.descripcion, value: val.descripcion, Id: val.Id };
+                        }));
+                    }
+                });
+            },
+            select: function (event, ui) {
+                $("#diaId").val(ui.item.Id);
+            }
+        });
+    </script>
+}
+
