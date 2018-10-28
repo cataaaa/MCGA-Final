@@ -192,6 +192,9 @@
     <Compile Include="Controllers\PlanController.cs" />
     <Compile Include="Controllers\ProfesionalController.cs" />
     <Compile Include="Controllers\TipoDiaController.cs" />
+    <Compile Include="Controllers\TipoDocumentoController.cs" />
+    <Compile Include="Controllers\TipoEspecialidadController.cs" />
+    <Compile Include="Controllers\TurnoController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -255,6 +258,9 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile1.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile2.pubxml" />
     <None Include="Scripts\jquery-1.12.4.intellisense.js" />
     <Content Include="Scripts\jquery-1.12.4.js" />
     <Content Include="Scripts\jquery-1.12.4.min.js" />
@@ -329,6 +335,22 @@
     <Content Include="Views\Profesional\Details.cshtml" />
     <Content Include="Views\Profesional\Edit.cshtml" />
     <Content Include="Views\Profesional\Index.cshtml" />
+    <Content Include="Views\Home\Administrar.cshtml" />
+    <Content Include="Views\Turno\Create.cshtml" />
+    <Content Include="Views\Turno\Delete.cshtml" />
+    <Content Include="Views\Turno\Details.cshtml" />
+    <Content Include="Views\Turno\Edit.cshtml" />
+    <Content Include="Views\Turno\Index.cshtml" />
+    <Content Include="Views\TipoEspecialidad\Create.cshtml" />
+    <Content Include="Views\TipoEspecialidad\Delete.cshtml" />
+    <Content Include="Views\TipoEspecialidad\Details.cshtml" />
+    <Content Include="Views\TipoEspecialidad\Edit.cshtml" />
+    <Content Include="Views\TipoEspecialidad\Index.cshtml" />
+    <Content Include="Views\TipoDocumento\Create.cshtml" />
+    <Content Include="Views\TipoDocumento\Delete.cshtml" />
+    <Content Include="Views\TipoDocumento\Details.cshtml" />
+    <Content Include="Views\TipoDocumento\Edit.cshtml" />
+    <Content Include="Views\TipoDocumento\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

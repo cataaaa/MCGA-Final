@@ -29,5 +29,11 @@ namespace MCGA_WebSite.Controllers
 
             return View();
         }
+        public ActionResult Administrar()
+        {
+            ViewBag.Message = "Your application description page.";
+
+            return View();
+        }
     }
 }
