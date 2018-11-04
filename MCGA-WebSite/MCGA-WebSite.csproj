@@ -187,6 +187,8 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AfiliadoController.cs" />
     <Compile Include="Controllers\EspecialidadController.cs" />
+    <Compile Include="Controllers\EspecialidadProfesionalController.cs" />
+    <Compile Include="Controllers\EstadoCivilController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PlanController.cs" />
@@ -194,6 +196,7 @@
     <Compile Include="Controllers\TipoDiaController.cs" />
     <Compile Include="Controllers\TipoDocumentoController.cs" />
     <Compile Include="Controllers\TipoEspecialidadController.cs" />
+    <Compile Include="Controllers\TipoSexoController.cs" />
     <Compile Include="Controllers\TurnoController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -351,6 +354,21 @@
     <Content Include="Views\TipoDocumento\Details.cshtml" />
     <Content Include="Views\TipoDocumento\Edit.cshtml" />
     <Content Include="Views\TipoDocumento\Index.cshtml" />
+    <Content Include="Views\TipoSexo\Create.cshtml" />
+    <Content Include="Views\TipoSexo\Delete.cshtml" />
+    <Content Include="Views\TipoSexo\Details.cshtml" />
+    <Content Include="Views\TipoSexo\Edit.cshtml" />
+    <Content Include="Views\TipoSexo\Index.cshtml" />
+    <Content Include="Views\EstadoCivil\Create.cshtml" />
+    <Content Include="Views\EstadoCivil\Delete.cshtml" />
+    <Content Include="Views\EstadoCivil\Details.cshtml" />
+    <Content Include="Views\EstadoCivil\Edit.cshtml" />
+    <Content Include="Views\EstadoCivil\Index.cshtml" />
+    <Content Include="Views\EspecialidadProfesional\Create.cshtml" />
+    <Content Include="Views\EspecialidadProfesional\Delete.cshtml" />
+    <Content Include="Views\EspecialidadProfesional\Details.cshtml" />
+    <Content Include="Views\EspecialidadProfesional\Edit.cshtml" />
+    <Content Include="Views\EspecialidadProfesional\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
