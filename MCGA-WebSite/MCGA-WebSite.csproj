@@ -186,6 +186,8 @@
     <Compile Include="Constants\HomeController\HomeControllerRoute.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AfiliadoController.cs" />
+    <Compile Include="Controllers\AgendaController.cs" />
+    <Compile Include="Controllers\AtencionController.cs" />
     <Compile Include="Controllers\EspecialidadController.cs" />
     <Compile Include="Controllers\EspecialidadProfesionalController.cs" />
     <Compile Include="Controllers\EstadoCivilController.cs" />
@@ -323,11 +325,6 @@
     <Content Include="Views\Afiliado\Details.cshtml" />
     <Content Include="Views\Afiliado\Edit.cshtml" />
     <Content Include="Views\Afiliado\Index.cshtml" />
-    <Content Include="Views\Especialidad\Create.cshtml" />
-    <Content Include="Views\Especialidad\Delete.cshtml" />
-    <Content Include="Views\Especialidad\Details.cshtml" />
-    <Content Include="Views\Especialidad\Edit.cshtml" />
-    <Content Include="Views\Especialidad\Index.cshtml" />
     <Content Include="Views\Plan\Create.cshtml" />
     <Content Include="Views\Plan\Delete.cshtml" />
     <Content Include="Views\Plan\Details.cshtml" />
@@ -364,11 +361,26 @@
     <Content Include="Views\EstadoCivil\Details.cshtml" />
     <Content Include="Views\EstadoCivil\Edit.cshtml" />
     <Content Include="Views\EstadoCivil\Index.cshtml" />
+    <Content Include="Views\Agenda\Create.cshtml" />
+    <Content Include="Views\Agenda\Delete.cshtml" />
+    <Content Include="Views\Agenda\Details.cshtml" />
+    <Content Include="Views\Agenda\Edit.cshtml" />
+    <Content Include="Views\Agenda\Index.cshtml" />
+    <Content Include="Views\Especialidad\Create.cshtml" />
+    <Content Include="Views\Especialidad\Delete.cshtml" />
+    <Content Include="Views\Especialidad\Details.cshtml" />
+    <Content Include="Views\Especialidad\Edit.cshtml" />
+    <Content Include="Views\Especialidad\Index.cshtml" />
     <Content Include="Views\EspecialidadProfesional\Create.cshtml" />
     <Content Include="Views\EspecialidadProfesional\Delete.cshtml" />
     <Content Include="Views\EspecialidadProfesional\Details.cshtml" />
     <Content Include="Views\EspecialidadProfesional\Edit.cshtml" />
     <Content Include="Views\EspecialidadProfesional\Index.cshtml" />
+    <Content Include="Views\Atencion\Create.cshtml" />
+    <Content Include="Views\Atencion\Delete.cshtml" />
+    <Content Include="Views\Atencion\Details.cshtml" />
+    <Content Include="Views\Atencion\Edit.cshtml" />
+    <Content Include="Views\Atencion\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

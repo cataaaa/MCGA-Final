@@ -1,85 +1,45 @@
-﻿@model MCGA.Entities.Profesional
+﻿@model MCGA.Entities.Agenda
 
 @{
     ViewBag.Title = "Details";
 }
 
-<h2>Detalle Profesional</h2>
+<h2>Detalle Agenda</h2>
 
 <div>
-    <h4>Profesional</h4>
+    <h4>Agenda</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.Nombre)
+            @Html.DisplayNameFor(model => model.fecha_desde)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Nombre)
+            @Html.DisplayFor(model => model.fecha_desde)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Apellido)
+            @Html.DisplayNameFor(model => model.fecha_hasta)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Apellido)
+            @Html.DisplayFor(model => model.fecha_hasta)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Numero)
+            @Html.DisplayNameFor(model => model.hora_desde)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Numero)
+            @Html.DisplayFor(model => model.hora_desde)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Direccion)
+            @Html.DisplayNameFor(model => model.hora_hasta)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Direccion)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Telefono)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Telefono)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Email)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Email)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.FechaNacimiento)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.FechaNacimiento)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Matricula)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Matricula)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Foto)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Foto)
+            @Html.DisplayFor(model => model.hora_hasta)
         </dd>
 
         <dt>
@@ -139,11 +99,19 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.TipoDocumento.descripcion)
+            @Html.DisplayNameFor(model => model.EspecialidadesProfesional.createdby)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.TipoDocumento.descripcion)
+            @Html.DisplayFor(model => model.EspecialidadesProfesional.createdby)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoDia.descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoDia.descripcion)
         </dd>
 
     </dl>

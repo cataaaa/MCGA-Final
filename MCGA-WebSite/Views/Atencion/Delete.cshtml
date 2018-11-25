@@ -1,46 +1,46 @@
-﻿@model MCGA.Entities.Turno
+﻿@model MCGA.Entities.Atencion
 
 @{
     ViewBag.Title = "Delete";
 }
 
-<h2>Borrar Turno</h2>
+<h2>Borrar Atencion</h2>
 
 <h3>Are you sure you want to delete this?</h3>
 <div>
-    <h4>Turno</h4>
+    <h4>Atencion</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.Fecha)
+            @Html.DisplayNameFor(model => model.hora_llegada)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Fecha)
+            @Html.DisplayFor(model => model.hora_llegada)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Hora)
+            @Html.DisplayNameFor(model => model.hora_atencion)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Hora)
+            @Html.DisplayFor(model => model.hora_atencion)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.reserva)
+            @Html.DisplayNameFor(model => model.sintomas)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.reserva)
+            @Html.DisplayFor(model => model.sintomas)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Observaciones)
+            @Html.DisplayNameFor(model => model.diagnostico)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Observaciones)
+            @Html.DisplayFor(model => model.diagnostico)
         </dd>
 
         <dt>
@@ -76,43 +76,19 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.deletedon)
+            @Html.DisplayNameFor(model => model.Bono.Id)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.deletedon)
+            @Html.DisplayFor(model => model.Bono.Id)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.deletedby)
+            @Html.DisplayNameFor(model => model.Turno.Observaciones)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.deletedby)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.isdeleted)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.isdeleted)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Afiliado.Nombre)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Afiliado.Nombre)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.EspecialidadesProfesional.createdby)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.EspecialidadesProfesional.createdby)
+            @Html.DisplayFor(model => model.Turno.Observaciones)
         </dd>
 
     </dl>

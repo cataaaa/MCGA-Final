@@ -1,10 +1,10 @@
-﻿@model IEnumerable<MCGA.Entities.Plan>
+﻿@model IEnumerable<MCGA.Entities.Atencion>
 
 @{
     ViewBag.Title = "Index";
 }
 
-<h2>Plan</h2>
+<h2>Atencion</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -12,13 +12,16 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.descripcion)
+            @Html.DisplayNameFor(model => model.hora_llegada)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.precio_bono_consulta)
+            @Html.DisplayNameFor(model => model.hora_atencion)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.precio_bono_farmacia)
+            @Html.DisplayNameFor(model => model.sintomas)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.diagnostico)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.createdon)
@@ -33,13 +36,10 @@
             @Html.DisplayNameFor(model => model.changedby)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.deletedon)
+            @Html.DisplayNameFor(model => model.Bono.Id)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.deletedby)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.isdeleted)
+            @Html.DisplayNameFor(model => model.Turno.Observaciones)
         </th>
         <th></th>
     </tr>
@@ -47,13 +47,16 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.descripcion)
+            @Html.DisplayFor(modelItem => item.hora_llegada)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.precio_bono_consulta)
+            @Html.DisplayFor(modelItem => item.hora_atencion)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.precio_bono_farmacia)
+            @Html.DisplayFor(modelItem => item.sintomas)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.diagnostico)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.createdon)
@@ -68,13 +71,10 @@
             @Html.DisplayFor(modelItem => item.changedby)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.deletedon)
+            @Html.DisplayFor(modelItem => item.Bono.Id)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.deletedby)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.isdeleted)
+            @Html.DisplayFor(modelItem => item.Turno.Observaciones)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
